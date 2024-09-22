@@ -75,7 +75,7 @@ local function setup(ext_config)
   end, { nargs = "?", complete = "file", desc = "Delete entry from telescope-frecency" })
 
   local group = vim.api.nvim_create_augroup("TelescopeFrecency", {})
-  vim.api.nvim_create_autocmd({ "BufWinEnter", "BufWritePost" }, {
+  vim.api.nvim_create_autocmd({ "BufWinEnter" }, {
     desc = "Update database for telescope-frecency",
     group = group,
     ---@param args { buf: integer }
